@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SuperOfertas Ecuador · Propuesta corregida</title>
+<style>
+:root{--ink:#1c2733;--muted:#566474;--paper:#f6f7f9;--card:#fff;--line:#d5dae1;--brand:#0b5f6b;--brand-d:#084852;--ok:#1b7a43;--warn:#8a5a00;--err:#a12a2a;--r:10px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--card);border-bottom:1px solid var(--line);padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+header b{font-size:1.15rem;color:var(--brand)}
+header span{font-size:.9rem;color:var(--muted)}
+main{max-width:980px;margin:0 auto;padding:20px;display:grid;grid-template-columns:1fr 320px;gap:20px}
+@media(max-width:800px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+h1{font-size:1.4rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 16px}
+.steps{display:flex;gap:6px;margin:0 0 16px;padding:0;list-style:none;font-size:.9rem;flex-wrap:wrap}
+.steps li{padding:4px 10px;border-radius:99px;background:#e9edf1;color:var(--muted)}
+.steps li.on{background:var(--brand);color:#fff;font-weight:600}
+.steps li.done{background:#d9eee3;color:var(--ok)}
+label{display:block;font-weight:600;margin:14px 0 4px;font-size:1rem}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:.9rem;margin-top:2px}
+input,select{width:100%;padding:12px;border:1.5px solid #8b97a5;border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:3px solid #7fc4cf;outline-offset:2px}
+input.bad{border-color:var(--err)}
+.err{color:var(--err);font-size:.9rem;margin-top:4px;min-height:1.2em}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:500px){.row{grid-template-columns:1fr}}
+.btn{display:inline-block;padding:14px 22px;border-radius:8px;border:0;font:inherit;font-weight:700;cursor:pointer}
+.primary{background:var(--brand);color:#fff;width:100%;margin-top:20px}
+.primary:hover{background:var(--brand-d)}
+.link{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:.9rem;margin-top:12px;padding:6px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price b{font-size:1.8rem}
+.old{text-decoration:line-through;color:var(--muted)}
+.tag{background:#d9eee3;color:var(--ok);font-weight:700;padding:2px 8px;border-radius:6px;font-size:.9rem}
+.sum dl{margin:0}.sum .l{display:flex;justify-content:space-between;padding:6px 0}
+.sum .t{border-top:1px solid var(--line);margin-top:6px;padding-top:10px;font-weight:700;font-size:1.15rem}
+.save{color:var(--ok)}
+.note{background:#eef6f7;border-left:4px solid var(--brand);padding:10px 12px;border-radius:6px;font-size:.92rem;margin:12px 0}
+.note.alert{background:#fdeeee;border-color:var(--err)}
+.note.ok{background:#e6f4ec;border-color:var(--ok)}
+.secure{display:flex;gap:8px;align-items:center;color:var(--ok);font-weight:600;font-size:.92rem;margin:4px 0 8px}
+.check{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-weight:400}
+.check input{width:20px;height:20px;margin-top:2px;flex:none}
+#map{background:#dfe9e2;border:1.5px solid #8b97a5;border-radius:8px;height:240px;position:relative;touch-action:none;overflow:hidden}
+#map i{position:absolute;background:#fff}
+#pin{position:absolute;width:30px;height:30px;margin:-30px 0 0 -15px;cursor:grab;font-size:28px;line-height:30px;text-align:center;user-select:none}
+.hide{display:none}
+.product{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.thumb{width:84px;height:84px;border-radius:10px;background:#e3edf0;display:grid;place-items:center;font-size:2.4rem;flex:none}
+@media(prefers-reduced-motion:no-preference){.card{transition:box-shadow .2s}}
+</style>
+</head>
+<body>
+<header><b>SuperOfertas Ecuador</b><span>Prototipo corregido · G1 HCI</span></header>
+<main>
+<section class="card" id="stage" aria-live="polite">
+  <ol class="steps" id="steps"></ol>
+
+  <!-- 1 PRODUCTO (Mejora 1) -->
+  <div class="step" data-s="0">
+    <h1>Tu carrito</h1><p class="sub">Revisa el pedido. El total final ya incluye todo.</p>
+    <div class="product"><div class="thumb" aria-hidden="true">🎧</div>
+      <div><b>Audífonos inalámbricos Sonar S2</b>
+        <div class="price"><b>$49.90</b><span class="old">$62.38</span><span class="tag">20% menos</span></div>
+        <div class="sub" style="margin:2px 0 0">Ahorras $12.48 frente al precio anterior. Quedan 14 unidades disponibles.</div></div></div>
+    <div class="note ok">Envío gratis a todo el país, sin comisión. El total que ves a la derecha es el que pagarás.</div>
+    <button class="btn primary" data-go="1">Continuar con la entrega</button>
+  </div>
+
+  <!-- 2 DOMICILIO + RECEPTOR (Mejora 2) -->
+  <div class="step hide" data-s="1">
+    <h1>¿A dónde lo enviamos?</h1><p class="sub">Solo pedimos lo necesario para entregar tu pedido.</p>
+    <label for="prov">Provincia</label>
+    <select id="prov"><option value="">Elige tu provincia</option><option>Azuay</option><option>Guayas</option><option>Imbabura</option><option>Manabí</option><option>Pichincha</option><option>Tungurahua</option></select>
+    <div class="err" id="e-prov"></div>
+    <label for="city">Ciudad</label><input id="city" autocomplete="address-level2"><div class="err" id="e-city"></div>
+    <label for="addr">Calle y número<span class="hint">Ejemplo: Av. Amazonas N24-12 y Colón</span></label><input id="addr" autocomplete="street-address"><div class="err" id="e-addr"></div>
+    <button class="link" type="button" id="geo">Usar mi ubicación</button>
+    <h2 style="font-size:1.1rem;margin:22px 0 0">¿Quién recibe?</h2>
+    <label for="name">Nombre completo</label><input id="name" autocomplete="name"><div class="err" id="e-name"></div>
+    <label for="tel">Teléfono<span class="hint">Llamaremos si hay un problema con la entrega.</span></label><input id="tel" inputmode="tel" autocomplete="tel"><div class="err" id="e-tel"></div>
+    <label for="mail">Correo<span class="hint">Te enviaremos aquí la confirmación y el seguimiento.</span></label><input id="mail" type="email" autocomplete="email"><div class="err" id="e-mail"></div>
+    <div class="note">No necesitas cédula ni fecha de nacimiento para recibir tu pedido.</div>
+    <button class="btn primary" id="to-map">Guardar y ubicar en el mapa</button>
+  </div>
+
+  <!-- 3 MAPA (Mejora 2) -->
+  <div class="step hide" data-s="2">
+    <h1>Confirma el punto de entrega</h1><p class="sub">Asegúrate que el pin esté bien ubicado. Arrástralo si hace falta.</p>
+    <div id="map" role="application" aria-label="Mapa. Arrastra el pin para ajustar la entrega.">
+      <i style="left:0;right:0;top:48%;height:14px"></i><i style="top:0;bottom:0;left:38%;width:14px"></i><i style="left:0;right:0;top:20%;height:8px"></i><i style="top:0;bottom:0;left:72%;width:8px"></i>
+      <div id="pin" aria-hidden="true">📍</div></div>
+    <div class="note" id="mapmsg">Dirección: <b id="maddr"></b></div>
+    <button class="btn primary" data-go="3">Guardar dirección</button>
+    <button class="link" type="button" data-go="3">Omitir y ajustar después</button>
+  </div>
+
+  <!-- 4 PAGO (Mejora 3) -->
+  <div class="step hide" data-s="3">
+    <h1>Pago</h1><p class="sub">Pagas $49.90 en total. No hay cargos adicionales.</p>
+    <div class="secure">🔒 Pago seguro. Tus datos de tarjeta viajan cifrados.</div>
+    <label for="card">Número de tarjeta</label><input id="card" inputmode="numeric" placeholder="0000 0000 0000 0000" autocomplete="cc-number"><div class="err" id="e-card"></div>
+    <div class="row"><div><label for="exp">Vence</label><input id="exp" placeholder="MM/AA" autocomplete="cc-exp"><div class="err" id="e-exp"></div></div>
+    <div><label for="cvv">Código (CVV)</label><input id="cvv" inputmode="numeric" maxlength="4" autocomplete="cc-csc"><div class="err" id="e-cvv"></div></div></div>
+    <label class="check" for="sub"><input type="checkbox" id="sub"><span>Quiero recibir ofertas por correo. <span class="hint">Opcional. Puedes darte de baja cuando quieras.</span></span></label>
+    <div class="note alert hide" id="payerr" role="alert"><b>No pudimos procesar el pago.</b><br>No se te cobró nada. Revisa los datos e inténtalo de nuevo, o escríbenos a soporte@superofertas.ec.</div>
+    <button class="btn primary" id="pay">Pagar $49.90</button>
+    <button class="link" type="button" id="fail">Demo: simular error de pago</button>
+  </div>
+
+  <!-- 5 CONFIRMACIÓN -->
+  <div class="step hide" data-s="4">
+    <h1>Pedido confirmado</h1>
+    <div class="note ok">Se cobraron $49.90. Enviamos el comprobante a <b id="cmail"></b>.</div>
+    <p>Entregaremos en <b id="caddr"></b>. Te llamaremos al <b id="ctel"></b> si hay algún problema.</p>
+    <button class="btn primary" data-go="0">Volver al inicio</button>
+  </div>
+</section>
+
+<aside class="card sum" aria-label="Resumen del pedido"><h2 style="font-size:1.1rem;margin:0 0 8px">Resumen</h2>
+<dl><div class="l"><span>Producto</span><span>$49.90</span></div>
+<div class="l save"><span>Ahorro incluido</span><span>−$12.48</span></div>
+<div class="l"><span>Envío</span><span>Gratis</span></div>
+<div class="l"><span>Comisión</span><span>$0.00</span></div>
+<div class="l t"><span>Total</span><span>$49.90</span></div></dl>
+<p class="sub" style="font-size:.85rem;margin-top:10px">Precios con IVA incluido.</p></aside>
+</main>
+<script>
+const $=id=>document.getElementById(id),names=["Carrito","Entrega","Mapa","Pago","Listo"];let cur=0,forceFail=false;
+function go(n){cur=n;document.querySelectorAll(".step").forEach(s=>s.classList.toggle("hide",+s.dataset.s!==n));
+ $("steps").innerHTML=names.map((t,i)=>`<li class="${i==n?"on":i<n?"done":""}">${t}</li>`).join("");
+ if(n==2){$("maddr").textContent=full()}window.scrollTo(0,0)}
+const full=()=>`${$("addr").value}, ${$("city").value}, ${$("prov").value}`;
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(+b.dataset.go));
+function check(id,ok,msg){const e=$("e-"+id);$(id).classList.toggle("bad",!ok);e.textContent=ok?"":msg;return ok}
+$("to-map").onclick=()=>{const r=[check("prov",$("prov").value,"Elige tu provincia."),check("city",$("city").value.trim(),"Escribe tu ciudad."),check("addr",$("addr").value.trim().length>5,"Escribe tu calle y número."),check("name",$("name").value.trim().split(" ").length>1,"Escribe nombre y apellido."),check("tel",/^\d{9,10}$/.test($("tel").value.replace(/\D/g,"")),"Escribe un teléfono de 9 o 10 dígitos."),check("mail",/^\S+@\S+\.\S+$/.test($("mail").value),"Escribe un correo válido, como nombre@correo.com.")];
+ if(r.every(Boolean))go(2);else document.querySelector(".bad").focus()};
+$("geo").onclick=()=>{$("prov").value="Pichincha";$("city").value="Quito";$("addr").value="Av. Amazonas N24-12 y Colón";$("geo").textContent="Ubicación aplicada. Revisa los datos."};
+const map=$("map"),pin=$("pin");let drag=false;pin.style.left="50%";pin.style.top="60%";
+function mv(e){const r=map.getBoundingClientRect();pin.style.left=Math.min(Math.max(e.clientX-r.left,0),r.width)+"px";pin.style.top=Math.min(Math.max(e.clientY-r.top+15,15),r.height)+"px"}
+pin.onpointerdown=e=>{drag=true;pin.setPointerCapture(e.pointerId)};pin.onpointermove=e=>drag&&mv(e);pin.onpointerup=()=>{drag=false;$("mapmsg").innerHTML="Pin ajustado. Si es correcto, pulsa <b>Guardar dirección</b>."};
+$("fail").onclick=()=>{forceFail=true;$("pay").click()};
+$("pay").onclick=()=>{const ok=[check("card",$("card").value.replace(/\D/g,"").length>=15,"Escribe los 15 o 16 dígitos de tu tarjeta."),check("exp",/^\d\d\/\d\d$/.test($("exp").value),"Usa el formato MM/AA."),check("cvv",/^\d{3,4}$/.test($("cvv").value),"Escribe los 3 o 4 dígitos del reverso.")];
+ if(!ok.every(Boolean)){forceFail=false;return}
+ if(forceFail){forceFail=false;$("payerr").classList.remove("hide");$("payerr").scrollIntoView({block:"center"});return}
+ $("payerr").classList.add("hide");$("cmail").textContent=$("mail").value;$("caddr").textContent=full();$("ctel").textContent=$("tel").value;go(4)};
+go(0);
+</script>
+</body>
+</html>
