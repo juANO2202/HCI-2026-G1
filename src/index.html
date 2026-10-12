@@ -66,7 +66,7 @@ input.bad{border-color:var(--err)}
     <div class="product"><div class="thumb" aria-hidden="true">🎧</div>
       <div><b>Audífonos inalámbricos Sonar S2</b>
         <div class="price"><b>$49.90</b><span class="old">$62.38</span><span class="tag">20% menos</span></div>
-        <div class="sub" style="margin:2px 0 0">Ahorras $12.48 frente al precio anterior. Quedan 14 unidades disponibles.</div></div></div>
+        <div class="sub" style="margin:2px 0 0">Ahorras $12.48 frente al precio anterior.</div></div></div>
     <div class="note ok">Envío gratis a todo el país, sin comisión. El total que ves a la derecha es el que pagarás.</div>
     <button class="btn primary" data-go="1">Continuar con la entrega</button>
   </div>
@@ -133,14 +133,14 @@ input.bad{border-color:var(--err)}
 const $=id=>document.getElementById(id),names=["Carrito","Entrega","Mapa","Pago","Listo"];let cur=0,forceFail=false;
 function go(n){cur=n;document.querySelectorAll(".step").forEach(s=>s.classList.toggle("hide",+s.dataset.s!==n));
  $("steps").innerHTML=names.map((t,i)=>`<li class="${i==n?"on":i<n?"done":""}">${t}</li>`).join("");
- if(n==2){$("maddr").textContent=full()}window.scrollTo(0,0)}
+ if(n==2){$("maddr").textContent=full();centerPin();$("mapmsg").innerHTML='Dirección: <b id="maddr">'+full()+'</b>'}window.scrollTo(0,0)}
 const full=()=>`${$("addr").value}, ${$("city").value}, ${$("prov").value}`;
 document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(+b.dataset.go));
 function check(id,ok,msg){const e=$("e-"+id);$(id).classList.toggle("bad",!ok);e.textContent=ok?"":msg;return ok}
 $("to-map").onclick=()=>{const r=[check("prov",$("prov").value,"Elige tu provincia."),check("city",$("city").value.trim(),"Escribe tu ciudad."),check("addr",$("addr").value.trim().length>5,"Escribe tu calle y número."),check("name",$("name").value.trim().split(" ").length>1,"Escribe nombre y apellido."),check("tel",/^\d{9,10}$/.test($("tel").value.replace(/\D/g,"")),"Escribe un teléfono de 9 o 10 dígitos."),check("mail",/^\S+@\S+\.\S+$/.test($("mail").value),"Escribe un correo válido, como nombre@correo.com.")];
  if(r.every(Boolean))go(2);else document.querySelector(".bad").focus()};
 $("geo").onclick=()=>{$("prov").value="Pichincha";$("city").value="Quito";$("addr").value="Av. Amazonas N24-12 y Colón";$("geo").textContent="Ubicación aplicada. Revisa los datos."};
-const map=$("map"),pin=$("pin");let drag=false;pin.style.left="50%";pin.style.top="60%";
+const map=$("map"),pin=$("pin");let drag=false;function centerPin(){pin.style.left="50%";pin.style.top="50%"}centerPin();
 function mv(e){const r=map.getBoundingClientRect();pin.style.left=Math.min(Math.max(e.clientX-r.left,0),r.width)+"px";pin.style.top=Math.min(Math.max(e.clientY-r.top+15,15),r.height)+"px"}
 pin.onpointerdown=e=>{drag=true;pin.setPointerCapture(e.pointerId)};pin.onpointermove=e=>drag&&mv(e);pin.onpointerup=()=>{drag=false;$("mapmsg").innerHTML="Pin ajustado. Si es correcto, pulsa <b>Guardar dirección</b>."};
 $("fail").onclick=()=>{forceFail=true;$("pay").click()};

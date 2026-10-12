@@ -7,5 +7,8 @@ Código en `src/index.html`. Ábrelo con doble clic en el navegador (no necesita
 2. **Formularios claros y justificados:** etiquetas legibles, provincia en lista, "Usar mi ubicación", sin cédula ni fecha de nacimiento, motivo de cada dato, mapa guiado y "Guardar dirección" como botón principal.
 3. **Pago seguro y sin trampas:** candado y aviso de seguridad, casilla de ofertas desmarcada, errores claros que dicen que no hubo cobro, paleta sobria.
 
+## Alcance del prototipo
+El mapa es una **simulación**: el pin no se geolocaliza a partir de la dirección escrita. Siempre aparece centrado en el mapa y la persona puede arrastrarlo para ajustarlo. En una versión real, el pin se centraría con un servicio de geocodificación a partir de la dirección ingresada.
+
 ## Issues que resuelve
 Completar con los números reales: Mejora 1 → #1,#2,#3 · Mejora 2 → #4, #5, #6, #7, #8 · Mejora 3 → #9, #10, #11, #12
