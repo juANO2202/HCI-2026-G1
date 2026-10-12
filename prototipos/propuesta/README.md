@@ -11,4 +11,4 @@ Código en `src/index.html`. Ábrelo con doble clic en el navegador (no necesita
 El mapa es una **simulación**: el pin no se geolocaliza a partir de la dirección escrita. Siempre aparece centrado en el mapa y la persona puede arrastrarlo para ajustarlo. En una versión real, el pin se centraría con un servicio de geocodificación a partir de la dirección ingresada.
 
 ## Issues que resuelve
-Completar con los números reales: Mejora 1 → #1,#2,#3 · Mejora 2 → #4, #5, #6, #7, #8 · Mejora 3 → #9, #10, #11, #12
+Completar con los números reales: Mejora 1 → #7,#8,#9 · Mejora 2 → #10, #11, #12, #13, #15 · Mejora 3 → #16, #17, #18, #19 .
