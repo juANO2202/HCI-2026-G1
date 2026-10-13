@@ -12,14 +12,22 @@
 
 **Hipótesis del grupo:** la Interfaz A genera más confianza porque es una marca conocida, con diseño ordenado, mensajes claros y un proceso predecible. La Interfaz B debería generar dudas por sus fallos deliberados.
 
-**Resultados (votos):** (completar después de la dinámica en clase)
+**Resultados (votos):** 16 votos en total.
 
-- Interfaz A:
-- Interfaz B:
+- Interfaz A (Mercado Libre): **14 votos**
+- Interfaz B (SuperOfertas Ecuador): **2 votos**
 
-**Razones más repetidas:** (completar después de la dinámica en clase)
+Fotos de las hojas de registro en `evidencias/` (`01-registro-votos-hoja-1.jpeg` a `04-registro-votos-hoja-4.jpeg`).
 
--
+**Razones más repetidas** (tal como las anotaron los compañeros):
+
+- **Diseño limpio, profesional y ordenado** (colores, contraste, paleta, logo): la razón más repetida a favor de A. Varios señalaron además que los colores de B son saturados y llamativos.
+- **Estructura y claridad de la información:** A muestra precio, entrega y producto de forma concreta, con resúmenes de compra y mensajes que explican qué pasará.
+- **Pocos datos personales:** a varios les molestó que B pida tantos datos personales sin explicarlos.
+- **Marca conocida y seguridad:** A se siente más segura por ser una página conocida y por mostrar calificaciones de vendedores.
+- **Precios poco honestos en B:** dice "envío gratis" y después cobra, y tiene una suscripción premarcada.
+- **Heurísticas de usabilidad (A):** visibilidad del sistema, prevención de errores, control y libertad del usuario, reconocimiento antes que recuerdo.
+- **A favor de B (minoría):** los descuentos llamaron la atención, muestra los pasos de compra y sus botones son fáciles de identificar.
 
 **Diferencias clave que explican la confianza:**
 
