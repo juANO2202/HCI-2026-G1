@@ -32,6 +32,6 @@ Se aplicaron tres mejoras en la propuesta corregida (`prototipos/propuesta/`, c�
 
 ## Aprendizajes del grupo
 - Juan: La confianza en una interfaz se construye paso a paso y se pierde en un solo momento de verdad. Registrar las razones de los compañeros mostró que lo que más pesa son la claridad y la honestidad, más que el diseño bonito.
-- Sandro:
-- Shantall:
-- Korayma:
+- Sandro: Entender la curva emocional y los momentos de verdad permite ver dónde se gana o se pierde la confianza. Un buen diseño no depende de un solo paso, sino de que todo el recorrido sea coherente.
+- Shantall: Mapear los touchpoints con la clase mostró que los problemas más graves aparecen cuando se piden datos y cuando el precio cambia. Escuchar a los compañeros ayuda a ver fallos que el grupo ya no notaba.
+- Korayma: Corregir una interfaz exige resolver cada problema con una decisión concreta: explicar el descuento, justificar cada dato y dar señales de seguridad. Comparar antes y después deja claro qué mejoras importan más.
