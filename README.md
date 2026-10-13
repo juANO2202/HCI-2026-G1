@@ -41,3 +41,5 @@ HCI-2026-G1/
 | Korayma | Issues, propuesta corregida y comparación antes/después | Issues, `prototipos/propuesta/`, `src/`, `resultados/comparacion-antes-despues` |
 
 Detalle completo de cada tarea en [TAREAS.md](TAREAS.md) y en los Issues del repositorio.
+
+Diapositivas: https://canva.link/8wd6kficzrqoe6b
