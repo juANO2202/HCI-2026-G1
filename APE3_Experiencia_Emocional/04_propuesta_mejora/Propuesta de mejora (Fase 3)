@@ -1,0 +1,63 @@
+# Fase 3 · Propuesta de mejora
+**Responsable:** Korayma · Flujo: pagos en línea · Interfaz analizada: SuperOfertas Ecuador (B), con Mercado Libre (A) como referencia
+
+## 1. Tres problemas y el principio HCI que incumplen
+
+| # | Problema en SuperOfertas Ecuador | Emoción que genera | Principio HCI |
+|---|---|---|---|
+| 1 | **Costos ocultos.** Promete "Envío gratis", pero en el resumen el total sube de $197.33 a $214.82 (envío $12.50 y comisión $4.99). | Engaño, desconfianza | **Consistencia** y heurística de Nielsen n.º 1: **visibilidad del estado del sistema** |
+| 2 | **Formularios sin justificación ni guía.** Pide cédula y fecha de nacimiento sin explicar, el error dice "dato inválido" sin indicar cuál, "Guardar" es gris y pequeño, el pin del mapa está lejos de la dirección y "OMITIR" es más grande que "Guardar". | Incertidumbre, frustración, ansiedad | **Carga cognitiva**, **accesibilidad** (contraste y tamaño) y Nielsen n.º 9: **ayudar a reconocer y corregir errores** |
+| 3 | **Pago sin señales de seguridad y con trampas.** La tarjeta no tiene candado y hay una suscripción de $9.99/mes premarcada. | Inseguridad, sensación de trampa | **Retroalimentación** y Nielsen n.º 5: **prevención de errores** |
+
+Estos tres problemas coinciden con los momentos de verdad de la curva emocional (carrito, domicilio, resumen del pedido y pago), que es donde más cae la confianza.
+
+## 2. Cómo lo resuelve Mercado Libre (referencia)
+
+| Problema | Mercado Libre |
+|---|---|
+| Costos | "Envío gratis" se mantiene hasta el final y el resumen del ahorro es consistente |
+| Formularios | Etiquetas claras, "Usar mi ubicación", provincia en lista y el motivo de cada dato ("Llamaremos si hay un problema con la entrega") |
+| Mapa | "Asegúrate que el pin esté bien ubicado" y "Guardar dirección" como botón principal |
+| Pago | Resumen consistente y datos de facturación explicados |
+
+## 3. Tres mejoras propuestas y su justificación
+
+### Mejora 1 · Transparencia de precios
+**Qué se hace:** mostrar desde el carrito un resumen con el total final. Si el envío es gratis, sigue siendo $0 hasta el pago; no aparecen comisiones nuevas. El descuento muestra el precio anterior y el ahorro real, y se elimina la urgencia falsa ("SOLO QUEDA 1 UNIDAD" y la cuenta regresiva).
+
+**Por qué:** el precio es una promesa. Si el total cambia al final, la interfaz rompe su propia promesa (inconsistencia) y el usuario siente que lo engañaron justo antes de pagar. Un total estable cumple con la visibilidad del estado del sistema.
+
+### Mejora 2 · Formularios claros y justificados
+**Qué se hace:** etiquetas legibles y con buen contraste, provincia en lista desplegable y botón "Usar mi ubicación". Se piden solo los datos necesarios, cada uno con su motivo, y se eliminan la cédula y la fecha de nacimiento. Los errores dicen qué campo corregir y cómo. En el mapa, el pin aparece centrado y ajustable con el mensaje "Asegúrate que el pin esté bien ubicado", y "Guardar dirección" es el botón principal.
+
+**Por qué:** menos campos y mejor guía reducen la carga cognitiva. Explicar el motivo de cada dato genera confianza, y un contraste y tamaño adecuados mejoran la accesibilidad. Un error que indica qué corregir cumple con Nielsen n.º 9.
+
+### Mejora 3 · Pago seguro y sin trampas
+**Qué se hace:** candado y aviso de pago seguro junto a la tarjeta, casilla de ofertas desmarcada y opcional, y un mensaje de error claro que dice si hubo cobro y cómo reintentar (en lugar de "Error 500"). La paleta es sobria y sin banners.
+
+**Por qué:** el usuario necesita retroalimentación visible de que sus datos están protegidos. Una casilla desmarcada evita que acepte algo sin darse cuenta (prevención de errores), y un error comprensible evita el pánico de no saber si se cobró.
+
+## 4. Efecto en confianza, motivación y experiencia
+
+| Mejora | Confianza | Motivación | Experiencia de usuario |
+|---|---|---|---|
+| 1. Transparencia de precios | El total no cambia, así que la promesa se cumple | Sin sorpresas, el usuario avanza hasta pagar | Menos abandono de compra y menos sensación de engaño |
+| 2. Formularios claros | Entiende para qué se usan sus datos | Completar el formulario cuesta menos esfuerzo | Menos errores, menos dudas y entrega más segura |
+| 3. Pago seguro | Ve señales de protección y no hay trampas | Se siente con control al pagar | Un fallo ya no genera pánico, porque sabe qué pasó |
+
+## 5. Comparativo antes/después
+
+**Pantalla elegida:** pago y resumen del pedido, porque reúne las mejoras 1 y 3 (total final, candado y casilla premarcada).
+
+| Antes (SuperOfertas original) | Después (propuesta corregida) |
+|---|---|
+| Total que sube de $197.33 a $214.82, tarjeta sin candado y suscripción premarcada | Total fijo, candado, aviso de pago seguro y casilla de ofertas desmarcada |
+
+![Comparativo antes/después del pago](captura-lado-a-lado/5-pago.png)
+
+Los comparativos de las demás pantallas (carrito, domicilio, datos de quien recibe y mapa) están en `resultados/capturas-lado-a-lado/`, y el prototipo completo en `src/index.html`.
+
+## 6. Evidencia
+- Prototipo corregido: `src/index.html` y `prototipos/propuesta/`.
+- Comparación de curvas: `resultados/comparacion-curvas.png`.
+- Problemas documentados como Issues (etiqueta `problema-ux`).
