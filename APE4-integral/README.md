@@ -7,10 +7,10 @@ Universidad Técnica de Ambato · FISEI · Carrera de Software · Interacción H
 
 | Integrante | Cuenta GitHub | Rama | Issue asignada |
 |---|---|---|---|
-| Juan | [@juANO2202](https://github.com/juANO2202) | `juan/diagnostico` | #1 |
-| Shantall | @<cuenta-shantall> | `shantall/arquitectura` | #2 |
-| Korayma | @<cuenta-korayma> | `korayma/prototipo-v1` | #3 |
-| Sandro | @<cuenta-sandro> | `sandro/pruebas-v2` | #4 |
+| Juan | [@juANO2202](https://github.com/juANO2202) | `juan/diagnostico` | #34 |
+| Shantall | @<cuenta-shantall> | `shantall/arquitectura` | #35 |
+| Korayma | @<cuenta-korayma> | `korayma/prototipo-v1` | #36 |
+| Sandro | @<cuenta-sandro> | `sandro/pruebas-v2` | #37 |
 
 ## Caso, persona y tarea
 
@@ -22,7 +22,9 @@ Universidad Técnica de Ambato · FISEI · Carrera de Software · Interacción H
 
 ## Cómo abrir el prototipo
 
-No requiere instalar nada: abrir el archivo con doble clic en el navegador.
+**Prototipo en Figma (herramienta principal):** https://www.figma.com/design/c1B497wZukkYE1xtiP256N — páginas `v1` y `v2`, modo Presentar (▶). El registro de estados y transiciones está en [prototipo/v1/README.md](prototipo/v1/README.md) y [prototipo/v2/README.md](prototipo/v2/README.md).
+
+**Réplica en código** (sin instalar nada, doble clic en el navegador):
 
 - **v1 (antes de la prueba):** `prototipo/v1/index.html`
 - **v2 (después de la prueba):** `prototipo/v2/index.html`
@@ -46,7 +48,7 @@ No requiere instalar nada: abrir el archivo con doble clic en el navegador.
 
 ## Enlaces de trabajo (completar con las URL reales del repositorio)
 
-- Issues: `<URL-REPO>/issues` (individuales #1–#4, problemas #5–#9, hallazgos #10–#12)
+- Issues: `<URL-REPO>/issues` (individuales #34–#37, problemas #38–#42, hallazgos #43–#45)
 - Pull Requests: `<URL-REPO>/pulls`
 - Commits: `<URL-REPO>/commits/main`
 - Protocolo: [pruebas/protocolo.md](pruebas/protocolo.md) · Resultados: [pruebas/resultados.csv](pruebas/resultados.csv)
