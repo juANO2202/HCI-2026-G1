@@ -4,6 +4,8 @@
 Para recorrerlo: abrir el archivo, página `v2`, elegir un frame y pulsar **Presentar** (▶). Puntos de inicio: «Flujo 1 y 2: agendar tutoría (éxito y error)» y «Flujo 3: ver y cancelar tutorías».
 > Compartir el archivo con «Cualquier persona con el enlace puede ver» antes de entregar.
 
+**Prototipo ejecutable en Figma (se pueden escribir campos y elegir opciones):** https://www.figma.com/design/c1B497wZukkYE1xtiP256N?node-id=8-3&autoplay-code-preview=8-3 (capa de código en la página `v2`; abrir el archivo para iniciar la vista previa).
+
 **Réplica en código:** `index.html` (+ `styles.css`, `app.js`) con la misma interacción, foco visible y soporte de teclado.
 Los frames y transiciones son los mismos que en v1 (ver `../v1/README.md`); cambia el contenido de los estados.
 
