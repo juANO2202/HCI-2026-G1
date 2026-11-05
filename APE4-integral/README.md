@@ -8,9 +8,9 @@ Universidad Técnica de Ambato · FISEI · Carrera de Software · Interacción H
 | Integrante | Cuenta GitHub | Rama | Issue asignada |
 |---|---|---|---|
 | Juan | [@juANO2202](https://github.com/juANO2202) | `juan/diagnostico` | #34 |
-| Shantall | @<cuenta-shantall> | `shantall/arquitectura` | #35 |
-| Korayma | @<cuenta-korayma> | `korayma/prototipo-v1` | #36 |
-| Sandro | @<cuenta-sandro> | `sandro/pruebas-v2` | #37 |
+| Shantall | Shantall | `shantall/arquitectura` | #35 |
+| Korayma | Korayna | `korayma/prototipo-v1` | #36 |
+| Sandro | Sandro | `sandro/pruebas-v2` | #37 |
 
 ## Caso, persona y tarea
 
