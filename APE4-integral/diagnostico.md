@@ -10,11 +10,11 @@
 
 | # | Problema | Heurística de Nielsen | Gravedad | Issue |
 |---|---|---|---|---|
-| P1 | Al enviar no hay confirmación clara de que la tutoría quedó registrada. | H1 Visibilidad del estado del sistema | Alta | #5 |
-| P2 | Si falla el envío, el formulario se vacía y hay que reescribir todo. | H3 Control y libertad / H5 Prevención de errores | Alta | #6 |
-| P3 | La opción «Agendar tutoría» está enterrada en *Servicios › Académico › Otros*. | H6 Reconocer antes que recordar | Alta | #7 |
-| P4 | Los errores son genéricos («Error 500», «Datos incompletos») y no dicen qué campo corregir. | H9 Ayudar a reconocer, diagnosticar y recuperarse de errores | Media | #8 |
-| P5 | Los horarios ocupados no se distinguen antes de elegirlos; el conflicto se descubre al final. | H5 Prevención de errores | Media | #9 |
+| P1 | Al enviar no hay confirmación clara de que la tutoría quedó registrada. | H1 Visibilidad del estado del sistema | Alta | #38 |
+| P2 | Si falla el envío, el formulario se vacía y hay que reescribir todo. | H3 Control y libertad / H5 Prevención de errores | Alta | #39 |
+| P3 | La opción «Agendar tutoría» está enterrada en *Servicios › Académico › Otros*. | H6 Reconocer antes que recordar | Alta | #40 |
+| P4 | Los errores son genéricos («Error 500», «Datos incompletos») y no dicen qué campo corregir. | H9 Ayudar a reconocer, diagnosticar y recuperarse de errores | Media | #41 |
+| P5 | Los horarios ocupados no se distinguen antes de elegirlos; el conflicto se descubre al final. | H5 Prevención de errores | Media | #42 |
 
 Problemas de accesibilidad detectados en la inspección: texto de ayuda gris claro con bajo contraste y controles sin foco visible (se verifican en las pruebas).
 

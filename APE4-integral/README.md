@@ -7,10 +7,10 @@ Universidad Técnica de Ambato · FISEI · Carrera de Software · Interacción H
 
 | Integrante | Cuenta GitHub | Rama | Issue asignada |
 |---|---|---|---|
-| Juan | [@juANO2202](https://github.com/juANO2202) | `juan/diagnostico` | #1 |
-| Shantall | @<cuenta-shantall> | `shantall/arquitectura` | #2 |
-| Korayma | @<cuenta-korayma> | `korayma/prototipo-v1` | #3 |
-| Sandro | @<cuenta-sandro> | `sandro/pruebas-v2` | #4 |
+| Juan | [@juANO2202](https://github.com/juANO2202) | `juan/diagnostico` | #34 |
+| Shantall | @<cuenta-shantall> | `shantall/arquitectura` | #35 |
+| Korayma | @<cuenta-korayma> | `korayma/prototipo-v1` | #36 |
+| Sandro | @<cuenta-sandro> | `sandro/pruebas-v2` | #37 |
 
 ## Caso, persona y tarea
 
@@ -46,7 +46,7 @@ No requiere instalar nada: abrir el archivo con doble clic en el navegador.
 
 ## Enlaces de trabajo (completar con las URL reales del repositorio)
 
-- Issues: `<URL-REPO>/issues` (individuales #1–#4, problemas #5–#9, hallazgos #10–#12)
+- Issues: `<URL-REPO>/issues` (individuales #34–#37, problemas #38–#42, hallazgos #43–#45)
 - Pull Requests: `<URL-REPO>/pulls`
 - Commits: `<URL-REPO>/commits/main`
 - Protocolo: [pruebas/protocolo.md](pruebas/protocolo.md) · Resultados: [pruebas/resultados.csv](pruebas/resultados.csv)
