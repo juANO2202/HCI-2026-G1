@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal de Tutorías FISEI · Prototipo v1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-version="1">
+  <header class="top">
+    <strong>Portal de Tutorías · FISEI</strong>
+    <nav>
+      <button type="button" class="nav-btn" data-go="inicio">Inicio</button>
+      <button type="button" class="nav-btn" data-go="mis">Mis tutorías</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- PANTALLA 1: INICIO -->
+    <section id="inicio" class="pantalla">
+      <h1>Hola, Andrea</h1>
+      <p>¿Qué necesitas hoy?</p>
+      <button type="button" class="btn primario grande" id="btn-agendar">Agendar tutoría</button>
+      <button type="button" class="btn secundario grande" data-go="mis">Ver mis tutorías</button>
+    </section>
+
+    <!-- PANTALLA 2: FORMULARIO (estados: normal, cargando, error) -->
+    <section id="formulario" class="pantalla" hidden>
+      <h1>Agendar tutoría</h1>
+      <p class="ayuda">Los campos con * son obligatorios.</p>
+
+      <form id="form" novalidate>
+        <div class="campo">
+          <label for="materia">Materia *</label>
+          <select id="materia" name="materia"></select>
+        </div>
+        <div class="campo">
+          <label for="docente">Docente *</label>
+          <select id="docente" name="docente"></select>
+        </div>
+        <div class="campo">
+          <label for="fecha">Fecha *</label>
+          <select id="fecha" name="fecha"></select>
+        </div>
+        <div class="campo">
+          <label>Hora *</label>
+          <div id="horas" class="slots"></div>
+        </div>
+        <div class="campo">
+          <label>Modalidad</label>
+          <label class="opcion"><input type="radio" name="modalidad" value="Presencial" checked> Presencial</label>
+          <label class="opcion"><input type="radio" name="modalidad" value="Virtual"> Virtual</label>
+        </div>
+        <div class="campo">
+          <label for="motivo">¿Con qué necesitas ayuda? * <span class="ayuda">(mínimo 10 caracteres)</span></label>
+          <textarea id="motivo" name="motivo" rows="3"></textarea>
+        </div>
+
+        <div class="acciones">
+          <button type="submit" class="btn primario" id="btn-enviar">Confirmar tutoría</button>
+          <span id="spinner" class="spinner" hidden></span>
+          <button type="button" class="btn secundario" data-go="inicio">Cancelar</button>
+        </div>
+      </form>
+
+      <!-- v1: el mensaje de error aparece al FINAL de la página -->
+      <div id="resumen-errores" class="resumen-error" hidden></div>
+    </section>
+
+    <!-- PANTALLA 3: ÉXITO -->
+    <section id="exito" class="pantalla" hidden>
+      <h1>Listo ✔</h1>
+      <button type="button" class="btn primario" data-go="mis">Continuar</button>
+    </section>
+
+    <!-- PANTALLA 4: MIS TUTORÍAS -->
+    <section id="mis" class="pantalla" hidden>
+      <h1>Mis tutorías</h1>
+      <ul id="lista" class="lista"></ul>
+      <p id="vacio" class="ayuda" hidden>Aún no tienes tutorías agendadas.</p>
+      <button type="button" class="btn primario" id="btn-agendar2">Agendar tutoría</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

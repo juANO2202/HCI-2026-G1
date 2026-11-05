@@ -1,0 +1,8 @@
+id,touchpoint,momento_verdad,pred_v1,obs_v1_P01,obs_v1_P02,obs_v1_media,pred_v2,obs_v2_P01,obs_v2_P02,obs_v2_media
+T1,Ingreso al portal,,0,0,0,0,0,0,0,0
+T2,Buscar la opción de tutorías,,-1,0,-1,-0.5,1,1,0,0.5
+T3,Elegir docente fecha y hora,,-1,-1,-1,-1,1,1,1,1
+T4,Llenar el formulario,,-1,-1,-2,-1.5,1,0,1,0.5
+T5,Enviar y esperar (carga),MV1,-2,-2,-2,-2,0,0,1,0.5
+T6,Mensaje de resultado,MV2,-2,-2,-2,-2,2,2,1,1.5
+T7,Revisar Mis tutorías,,-1,-1,-2,-1.5,1,1,1,1
