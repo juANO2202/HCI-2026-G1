@@ -22,7 +22,9 @@ Universidad Técnica de Ambato · FISEI · Carrera de Software · Interacción H
 
 ## Cómo abrir el prototipo
 
-No requiere instalar nada: abrir el archivo con doble clic en el navegador.
+**Prototipo en Figma (herramienta principal):** https://www.figma.com/design/c1B497wZukkYE1xtiP256N — páginas `v1` y `v2`, modo Presentar (▶). El registro de estados y transiciones está en [prototipo/v1/README.md](prototipo/v1/README.md) y [prototipo/v2/README.md](prototipo/v2/README.md).
+
+**Réplica en código** (sin instalar nada, doble clic en el navegador):
 
 - **v1 (antes de la prueba):** `prototipo/v1/index.html`
 - **v2 (después de la prueba):** `prototipo/v2/index.html`
