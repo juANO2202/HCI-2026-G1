@@ -1,0 +1,11 @@
+/* DISEÑO INICIAL: contiene problemas deliberados para el taller */
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;color:#222}
+header{background:#203d73;color:white;padding:18px}header h1{margin:0}
+nav{display:flex;gap:6px;margin-top:12px}nav a{color:white;background:#4b66a1;padding:8px;text-decoration:none}
+main{width:1100px;margin:25px auto}h2{font-size:28px}
+.productos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tarjeta{background:white;border:1px solid #ddd;padding:16px;min-width:0}
+.foto{height:135px;background:#dce7f6;display:grid;place-items:center;font-size:46px}
+button{background:#265fa5;color:white;border:0;padding:10px;cursor:pointer}
+footer{text-align:center;padding:20px;background:#203d73;color:white;margin-top:30px}
+/* RETO: convertir a mobile first, mejorar espaciado, controles y añadir @media */

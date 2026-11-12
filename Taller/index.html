@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda Aula — Reto responsive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-contenido">
+      <h1>Tienda Aula</h1>
+      <p class="carrito" aria-live="polite">🛒 Carrito: <strong id="contador">0</strong></p>
+    </div>
+    <nav aria-label="Navegación principal">
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="productos" aria-labelledby="titulo-productos">
+      <h2 id="titulo-productos">Productos destacados</h2>
+      <p>Explora nuestra selección de artículos.</p>
+
+      <div class="productos">
+        <article class="tarjeta">
+          <div class="foto" aria-hidden="true">🎧</div>
+          <h3>Audífonos</h3>
+          <p class="precio">$25</p>
+          <button type="button" data-producto="Audífonos" aria-label="Agregar Audífonos al carrito">Agregar al carrito</button>
+        </article>
+
+        <article class="tarjeta">
+          <div class="foto" aria-hidden="true">⌨️</div>
+          <h3>Teclado</h3>
+          <p class="precio">$30</p>
+          <button type="button" data-producto="Teclado" aria-label="Agregar Teclado al carrito">Agregar al carrito</button>
+        </article>
+
+        <article class="tarjeta">
+          <div class="foto" aria-hidden="true">🖱️</div>
+          <h3>Mouse</h3>
+          <p class="precio">$15</p>
+          <button type="button" data-producto="Mouse" aria-label="Agregar Mouse al carrito">Agregar al carrito</button>
+        </article>
+      </div>
+
+      <p id="estado" class="estado" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="nosotros" aria-labelledby="titulo-nosotros">
+      <h2 id="titulo-nosotros">Nosotros</h2>
+      <p>Ejercicio académico de interfaz adaptable.</p>
+    </section>
+  </main>
+
+  <footer id="contacto">Tienda Aula · Proyecto académico</footer>
+
+  <script>
+    var total = 0;
+    var temporizador;
+
+    function agregar(boton) {
+      var nombre = boton.dataset.producto;
+      var estado = document.getElementById('estado');
+
+      total++;
+      document.getElementById('contador').textContent = total;
+
+      // Retroalimentación en el mensaje de estado
+      estado.textContent = '✔ ' + nombre + ' agregado al carrito.';
+      estado.classList.add('visible');
+
+      // Retroalimentación en el botón pulsado
+      boton.classList.add('agregado');
+      boton.textContent = '✔ Agregado';
+
+      clearTimeout(temporizador);
+      temporizador = setTimeout(function () {
+        boton.classList.remove('agregado');
+        boton.textContent = 'Agregar al carrito';
+        estado.classList.remove('visible');
+      }, 2000);
+    }
+
+    document.querySelectorAll('button[data-producto]').forEach(function (b) {
+      b.addEventListener('click', function () { agregar(b); });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* ==========================================================
+   Tienda Aula — Mobile First
+   Base = móvil (375 px). Las media queries AÑADEN reglas
+   para pantallas más grandes (min-width).
+   ========================================================== */
+
+:root {
+  --azul-oscuro: #203d73;   /* contraste 10.6:1 con blanco */
+  --azul-nav: #34508c;      /* contraste 8.3:1 con blanco */
+  --azul-boton: #1e56a0;    /* contraste 7.1:1 con blanco */
+  --verde-ok: #1b6b3a;      /* contraste 6.4:1 con blanco */
+  --fondo: #f4f4f4;
+  --texto: #222;
+  --espacio: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;          /* 16 px: texto legible sin zoom */
+  line-height: 1.5;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+/* ---------- Encabezado y navegación ---------- */
+header {
+  background: var(--azul-oscuro);
+  color: #fff;
+  padding: var(--espacio);
+}
+
+.header-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+header h1 { margin: 0; font-size: 1.5rem; }
+.carrito { margin: 0; }
+
+/* Flexbox: la navegación es una fila de elementos de una dimensión.
+   En móvil los enlaces reparten el ancho por igual y son fáciles de tocar. */
+nav {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+nav a {
+  flex: 1;
+  min-height: 48px;         /* área táctil mínima (Ley de Fitts) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: var(--azul-nav);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+nav a:hover { background: #4a68ad; }
+nav a:focus-visible,
+button:focus-visible { outline: 3px solid #ffbf47; outline-offset: 2px; }
+
+/* ---------- Contenido principal ---------- */
+main {
+  width: 100%;
+  max-width: 1100px;        /* flexible: ya no es un ancho fijo de 1100 px */
+  margin: 0 auto;
+  padding: var(--espacio);
+}
+
+h2 { font-size: 1.5rem; margin: 24px 0 8px; }
+
+/* Grid: las tarjetas forman una cuadrícula de dos dimensiones.
+   Móvil: 1 columna. */
+.productos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio);
+}
+
+.tarjeta {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: var(--espacio);
+  min-width: 0;
+}
+
+.tarjeta h3 { margin: 12px 0 4px; }
+.precio { margin: 0 0 12px; font-weight: bold; font-size: 1.125rem; }
+
+.foto {
+  height: 135px;
+  background: #dce7f6;
+  display: grid;
+  place-items: center;
+  font-size: 46px;
+  border-radius: 6px;
+}
+
+/* ---------- Botones ---------- */
+button {
+  width: 100%;              /* ancho completo en móvil: fácil de pulsar */
+  min-height: 48px;
+  background: var(--azul-boton);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+}
+
+button:hover { background: #174682; }
+button:active { transform: scale(.98); }
+
+/* Retroalimentación visual al agregar (R7) */
+button.agregado { background: var(--verde-ok); }
+
+.estado {
+  min-height: 48px;
+  margin: var(--espacio) 0 0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  opacity: 0;
+  transition: opacity .25s;
+}
+
+.estado.visible {
+  opacity: 1;
+  background: #e3f4e9;
+  color: #104d28;           /* contraste 8.2:1 sobre el fondo verde claro */
+  border-color: var(--verde-ok);
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--azul-oscuro);
+  color: #fff;
+  margin-top: 30px;
+}
+
+/* ==========================================================
+   Media query 1 — Tablet (≥ 768 px)
+   Justificación: a 768 px hay espacio para 2 columnas sin que
+   las tarjetas queden demasiado estrechas (~340 px c/u).
+   ========================================================== */
+@media (min-width: 768px) {
+  header { padding: 20px 32px; }
+  main { padding: 24px 32px; }
+
+  .productos { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+  /* En pantallas con puntero preciso los enlaces no necesitan ocupar todo el ancho */
+  nav a { flex: 0 0 auto; padding: 8px 20px; }
+}
+
+/* ==========================================================
+   Media query 2 — Escritorio (≥ 1024 px)
+   Justificación: con 1024 px o más caben 3 columnas manteniendo
+   tarjetas de ~320 px; el botón deja de ser de ancho completo.
+   ========================================================== */
+@media (min-width: 1024px) {
+  .productos { grid-template-columns: repeat(3, 1fr); }
+  button { width: auto; min-width: 180px; }
+}
