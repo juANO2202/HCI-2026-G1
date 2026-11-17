@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aula Abierta · Talleres</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <p class="marca">Aula Abierta</p>
+    <h1>Elige tu taller</h1>
+  </header>
+
+  <main class="contenido">
+    <section class="taller" aria-labelledby="titulo-taller">
+      <article class="tarjeta">
+        <h2 id="titulo-taller">Interfaces web accesibles</h2>
+        <dl class="datos">
+          <div>
+            <dt>Día</dt>
+            <dd>Jueves</dd>
+          </div>
+          <div>
+            <dt>Horario</dt>
+            <dd>14:00 a 16:00</dd>
+          </div>
+          <div>
+            <dt>Lugar</dt>
+            <dd>Laboratorio 2</dd>
+          </div>
+        </dl>
+        <div class="acciones">
+          <button type="button" id="btn-reservar">Reservar un lugar</button>
+          <button type="button" id="btn-cancelar" class="secundario" disabled>Cancelar reserva</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="estado" aria-labelledby="titulo-estado">
+      <article class="tarjeta">
+        <h2 id="titulo-estado">Mi reserva</h2>
+        <p id="estado-reserva" role="status">Aún no tienes una reserva.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="reserva.js"></script>
+</body>
+</html>
