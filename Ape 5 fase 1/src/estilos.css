@@ -1,0 +1,175 @@
+/* APE 5 · Fase 1 · Mobile-First
+   Base: una sola columna (móvil). A partir de 48rem (768 px): dos columnas.
+   El orden del HTML (taller → mi reserva) no cambia en ningún ancho. */
+
+:root {
+  --texto: #303638;
+  --texto-suave: #4a5256;
+  --borde: #758084;
+  --fondo: #ffffff;
+  --acento: #1f5f8b;
+  --acento-oscuro: #174a6d;
+  --ok: #1e6b3a;
+  --aviso: #8a3b12;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font: 1.125rem/1.6 system-ui, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+.cabecera,
+.contenido {
+  max-width: 62.5rem;
+  margin-inline: auto;
+}
+
+.marca {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+h1 {
+  margin: 0.25rem 0 1rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+/* Base móvil: una columna */
+.contenido {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.tarjeta {
+  height: 100%;
+  padding: 1.125rem;
+  border: 2px solid var(--borde);
+  border-radius: 0.5rem;
+}
+
+.datos {
+  margin: 0 0 1.25rem;
+}
+
+.datos div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  padding-block: 0.25rem;
+}
+
+.datos dt {
+  font-weight: 700;
+}
+
+.datos dt::after {
+  content: ":";
+}
+
+.datos dd {
+  margin: 0;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+button {
+  min-height: 2.75rem;
+  padding: 0.5rem 1.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--acento);
+  border: 2px solid var(--acento);
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--acento-oscuro);
+  border-color: var(--acento-oscuro);
+}
+
+button.secundario {
+  color: var(--acento);
+  background: #ffffff;
+}
+
+button.secundario:hover:not(:disabled) {
+  color: #ffffff;
+}
+
+button:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+button:disabled {
+  color: #5c6468;
+  background: #e6e9ea;
+  border-color: #b9c0c3;
+  cursor: not-allowed;
+}
+
+#estado-reserva {
+  margin: 0;
+  font-weight: 600;
+}
+
+#estado-reserva.confirmada {
+  color: var(--ok);
+}
+
+#estado-reserva.cancelada {
+  color: var(--aviso);
+}
+
+/* Escritorio y tablet: dos columnas desde 48rem (768 px) */
+@media (min-width: 48rem) {
+  body {
+    padding: 2.5rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .contenido {
+    grid-template-columns: 3fr 2fr;
+    gap: 1.25rem;
+  }
+
+  .acciones {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button {
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+}
