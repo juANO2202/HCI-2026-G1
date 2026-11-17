@@ -31,7 +31,7 @@ Se transformó el Boceto A (ancho fijo de 960 px) en una interfaz Mobile-First: 
 
 ## Aprendizaje de cada integrante
 
-- Juan: [completar una frase]
-- Sandro: [completar una frase]
-- Shantall: [completar una frase]
-- Korayma: [completar una frase]
+- **Juan:** «Aprendí que medir el `scrollWidth` demuestra que todo cabe, pero no que la persona entienda la pantalla; por eso hay que probar con usuarios.»
+- **Sandro:** «Aprendí a pensar el CSS desde el celular: una columna base y la segunda columna solo desde 48rem.»
+- **Shantall:** «Aprendí que un botón deshabilitado pierde el foco y que hay que moverlo al botón disponible para no dejar perdido a quien usa teclado.»
+- **Korayma:** «Aprendí que con etiquetas semánticas y botones nativos se logra accesibilidad por teclado sin código adicional.»

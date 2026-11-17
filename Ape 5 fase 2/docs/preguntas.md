@@ -53,16 +53,16 @@ Cada respuesta se apoya en el código, en una medición y en un principio HCI. L
 
 | Dato | Registro |
 |---|---|
-| Fecha y hora | [completar] |
+| Fecha y hora |  |
 | Grupo retador | G3 |
-| Integrantes del G3 presentes | [completar] |
-| Integrantes del G1 que respondieron | [completar] |
+| Integrantes del G3 presentes |  |
+| Integrantes del G1 que respondieron |  |
 
 | N.º | Pregunta formulada por el G3 (textual) | Respuesta dada por el G1 | Evidencia mostrada | Resultado |
 |---|---|---|---|---|
-| Técnica 1 | [completar] | [completar] | [completar] | [completar] |
-| Técnica 2 | [completar] | [completar] | [completar] | [completar] |
-| Objeción | [completar] | [completar] | [completar] | [completar] |
+| Técnica 1 |  |  |  |  |
+| Técnica 2 |  |  |  |  |
+| Objeción |  |  |  |  |
 
-**Observaciones del grupo retador:** [completar]
-**Compromisos de mejora acordados:** [completar]
+**Observaciones del grupo retador:** 
+**Compromisos de mejora acordados:** 

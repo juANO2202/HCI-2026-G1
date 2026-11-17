@@ -22,6 +22,6 @@ Ape 5 fase 2/
 | Medición en 4 viewports y capturas | Hecho |
 | Prueba de teclado | Hecho |
 | Observación con compañero (`checklist.md`) | Pendiente: faltan los datos reales |
-| Acta de la defensa (`preguntas.md`) | Respuestas preparadas; falta registrar lo ocurrido en el aula |
-| 4 Issues y 4 Pull Requests con revisión cruzada | Pendiente (ver Tabla 7 del informe) |
-| Informe firmado | Pendiente: completar los campos `[completar]` y firmar |
+| Acta de la defensa (`preguntas.md`) | Respuestas preparadas; el acta queda en blanco para registrarla en el aula |
+| 4 Issues y 4 Pull Requests con revisión cruzada | Responsables y revisores propuestos (Tabla 7); faltan los PR |
+| Informe firmado | Pendiente: completar la observación (`[completar]`) y firmar |
